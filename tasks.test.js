@@ -1,9 +1,11 @@
-const { test, expect } = require('@jest/globals');
+const { test, expect, it } = require('@jest/globals');
 const stringLength = require('./task1');
 
 const reverseString = require('./task2');
 
 const calculator = require('./task3');
+
+const capitalise = require('./task4');
 
 //String Length
 it('Length of string', () => {
@@ -82,5 +84,21 @@ describe('divide', () => {
 
   test('divides 1500 by 300', () => {
 		expect(calculator.divide(1500, 300)).toBe(5);
+	});
+});
+
+//Capitalise 
+
+describe('capitalise', () => {
+	test('capitalises first character', () => {
+		expect(capitalise('thesis')).toBe('Thesis');
+	});
+
+	test('capitalises first character', () => {
+		expect(capitalise('this is my pen')).toBe('This is my pen');
+	});
+
+  test('capitalises first character', () => {
+		expect(capitalise('The test passed')).toBe('The test passed');
 	});
 });
