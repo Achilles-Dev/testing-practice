@@ -50,6 +50,10 @@ describe('subtract', () => {
 
   test('subtracts 0 from 1', () => {
     expect(calculator.subtract(1,0)).toBe(1);
+  });
+
+  test('subtracts 234 from 124', () => {
+    expect(calculator.subtract(234,134)).toBe(100);
   })
 });
 
@@ -61,6 +65,10 @@ describe('multiply', () => {
 	test('multiplies number and 0', () => {
 		expect(calculator.multiply(5, 0)).toBe(0);
 	});
+
+  test('multiplies numbers', () => {
+		expect(calculator.multiply(100, 123)).toBe(12300);
+	});
 });
 
 describe('divide', () => {
@@ -70,5 +78,9 @@ describe('divide', () => {
 
 	test('divides 0 by number', () => {
 		expect(calculator.divide(0, 5)).toBe(0);
+	});
+
+  test('divides 1500 by 300', () => {
+		expect(calculator.divide(1500, 300)).toBe(5);
 	});
 });
